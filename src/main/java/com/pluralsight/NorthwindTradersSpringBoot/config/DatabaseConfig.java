@@ -7,10 +7,8 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
+@Configuration
 public class DatabaseConfig {
-
-    @Configuration
-    public class DatabaseConfig {
 
         // We will build the BasicDataSource and store it here.
         private BasicDataSource basicDataSource;
@@ -38,4 +36,3 @@ public class DatabaseConfig {
 
         }
     }
-}
