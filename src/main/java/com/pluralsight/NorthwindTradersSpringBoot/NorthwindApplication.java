@@ -12,7 +12,7 @@ public class NorthwindApplication {
 
     @Autowired
     @Qualifier("jdbcProductDao") // choose where to get the films(can switch between DB [jdbcFilmDao] and 'simpleFilmDAO')
-    private IProductDao filmDAO;
+    private IProductDao productDao;
 
     @Override
     public void run (String...args) throws Exception {
@@ -44,14 +44,10 @@ public class NorthwindApplication {
                     System.out.println("Invalid Choice");
             }
         }
-
-
     }
     private void AddProduct() {
 
-        System.out.println("We are adding a new film");
-
-        Products theProduct = new Products();
+        System.out.println("We are adding a new product");
 
         try {
             // Delay for 3000 milliseconds (5 seconds)
@@ -63,17 +59,12 @@ public class NorthwindApplication {
             System.err.println("Delay was interrupted!");
             return;
         }
-        System.out.println("Film added ✅");
+        System.out.println("Product added ✅");
     }
 
     private void displayAllProducts() {
 
-        List<Products> Products = Product.getAll();
+        List<Products> Products = productDao.getAll();
         Products.forEach(System.out::println);
     }
-}
-
-
-
-
 }
