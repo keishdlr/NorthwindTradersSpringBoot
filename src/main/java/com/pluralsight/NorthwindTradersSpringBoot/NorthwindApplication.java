@@ -29,7 +29,7 @@ public class NorthwindApplication {
                     """);
             switch (scanner.nextInt()){
                 case 1:
-                    ();
+                    displayAllProducts();
                     break;
 
                 case 2:
@@ -47,13 +47,11 @@ public class NorthwindApplication {
 
 
     }
-    private void AddFilm() {
+    private void AddProduct() {
 
         System.out.println("We are adding a new film");
 
         Products theProduct = new Products();
-        theProduct.set("Uncharted");
-        theProduct.setRentalRate(5.99);
 
         try {
             // Delay for 3000 milliseconds (5 seconds)
@@ -68,13 +66,13 @@ public class NorthwindApplication {
         System.out.println("Film added ✅");
     }
 
-    private void displayAllFilms() {
+    private void displayAllProducts() {
 
-        List<Film> films = filmDAO.getAll();
-        films.forEach(System.out::println);
+        List<Products> Products = Product.getAll();
+        Products.forEach(System.out::println);
     }
 }
-    }
+
 
 
 
