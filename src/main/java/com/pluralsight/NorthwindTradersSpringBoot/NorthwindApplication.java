@@ -14,7 +14,6 @@ public class NorthwindApplication {
     @Qualifier("jdbcProductDao") // choose where to get the films(can switch between DB [jdbcFilmDao] and 'simpleFilmDAO')
     private IProductDao productDao;
 
-    @Override
     public void run (String...args) throws Exception {
 
         Scanner scanner = new Scanner(System.in);
