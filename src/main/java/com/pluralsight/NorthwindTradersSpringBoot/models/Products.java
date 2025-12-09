@@ -47,4 +47,14 @@ public class Products {
     public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
+
+    @Override
+    public String toString() {
+        return "Products{" +
+                "productid=" + productid +
+                ", productName='" + productName + '\'' +
+                ", categoryId=" + categoryId +
+                ", unitPrice=" + unitPrice +
+                '}';
+    }
 }

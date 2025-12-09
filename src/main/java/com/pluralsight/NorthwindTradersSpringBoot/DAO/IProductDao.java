@@ -7,6 +7,7 @@ import java.util.List;
 public interface IProductDao {
 
         void add(Products product);
+
         List<Products> getAll();
 
         // search method

@@ -46,7 +46,7 @@ public class JdbcProductDao implements IProductDao {
 
                 product.setCategoryId(rs.getInt("CategoryID"));
 
-                product.setUnitPrice(rs.getDouble("rUnitPrice"));
+                product.setUnitPrice(rs.getDouble("UnitPrice"));
 
                 products.add(product);
             }
@@ -59,6 +59,4 @@ public class JdbcProductDao implements IProductDao {
         // Return the list of product objects.
         return products;
     }
-    }
-
 }
